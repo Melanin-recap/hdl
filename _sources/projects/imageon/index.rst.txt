@@ -50,7 +50,7 @@ In terms of audio part, the axi_spdif module is used to manage the audio output
 transmission on the HDMI connector. Additionally, a conversion from RGB to
 YCbCr and a downsampling from 444 to 422 are done in the transmit and receive
 (in reverse) datapaths as a default operation. To ensure the setup of the
-:adi:`ADV7511` and :adi:`ADV75611` ICs, Xilinx's AXI IIC module is used.
+:adi:`ADV7511` and :adi:`ADV7611` ICs, Xilinx's AXI IIC module is used.
 
 Block diagram
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -101,34 +101,24 @@ axi_iic_imageon           0x43C4_0000
 GPIO
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Software GPIO number is calculated as follows:
+To know how the Software GPIO numbers are calculated, check out
+:ref:`GPIOs - HDL Architecture page <architecture gpio>`.
 
-- Zynq-7000: if PS7 EMIOs are used, then offset is 54
+================  ============  =======  =========
+GPIO signal       Direction     HDL no.  Zynq-7000
+================  ============  =======  =========
+hdmi_iic_rstn     INOUT         33       87
+hdmi_rx_int       INOUT         32       86
+gpio_bd[31:0]     INOUT         31:0     85:54
+================  ============  =======  =========
 
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 2
+.. admonition:: Legend
+   :class: note
 
-   * - GPIO signal
-     - Direction
-     - HDL GPIO EMIO
-     - Software GPIO
-   * -
-     - (from FPGA view)
-     -
-     - Zynq-7000
-   * - hdmi_iic_rstn
-     - INOUT
-     - 33
-     - 87
-   * - hdmi_rx_int
-     - INOUT
-     - 32
-     - 86
-   * - gpio_bd[31:0]
-     - INOUT
-     - 31:0
-     - 85:54
+   - GPIO signal = name of the GPIO in the HDL project
+   - Direction = from the FPGA point of view
+   - HDL no. = HDL GPIO EMIO number
+   - Zynq-7000 = Software GPIO to be used in device trees
 
 Interrupts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -214,9 +204,9 @@ HDL related
 Software related
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- :git-linux:`IMAGEON dts source code (arm32) <arch/arm/boot/dts/zynq-zed-imageon.dts>`
+- :git-linux:`IMAGEON dts source code (arm32) <arch/arm/boot/dts/xilinx/zynq-zed-imageon.dts>`
 - :git-linux:`ADV7604 Linux driver <drivers/media/i2c/adv7604.c>`
-- :git-linux:`ADV7511 Linux driver <drivers/media/i2c/adv7511.c>`
+- :git-linux:`ADV7511 Linux driver <drivers/media/i2c/adv7511-v4l2.c>`
 - :dokuwiki:`ADV7511 driver docs <resources/tools-software/linux-drivers/drm/adv7511>`
 
 .. include:: ../common/more_information.rst

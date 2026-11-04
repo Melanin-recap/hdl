@@ -8,12 +8,12 @@
 
     <title>JESD204 Interface Framework &#8212; HDL  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/app.min.css?v=fb8972a4" />
-    <script async="async" src="../../_static/app.umd.js?v=8c78863f"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/app.min.css?v=a3ee7af8" />
+    <script async="async" src="../../_static/app.umd.js?v=048c1170"></script>
     <link rel="icon" href="../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
-    <link rel="next" title="Generic JESD204 block designs" href="generic_jesd_bds/" />
+    <link rel="next" title="System Architecture" href="system_architecture/" />
     <link rel="prev" title="Control Interface" href="../i3c_controller/interface/" />
    
   
@@ -192,6 +192,7 @@ Content on this topic
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/build_hdl/">Build an HDL project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/build_boot_bin/">Build the BOOT.BIN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/build_boot_scr/">Build the boot.scr</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/build_intel_boot_image/">Build the Intel Boot Image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/architecture/">HDL architecture</a></li>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-1-2" id="toctree-collapse-1-2"/><div class="collapse"><a class="reference internal" href="../../user_guide/ip_cores/">IP cores</a><label for="toctree-collapse-1-2"><div class="icon"></div></label></div><ul>
@@ -223,6 +224,7 @@ Content on this topic
 </ul>
 </li>
 <li class="toctree-l2 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-2" id="toctree-collapse-2-2" checked=""/><div class="collapse"><a class="current reference internal" href="#">JESD204 Interface Framework</a><label for="toctree-collapse-2-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="system_architecture/">System Architecture</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generic_jesd_bds/">Generic JESD204 block designs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="axi_jesd204_tx/">JESD204B/C Link Transmit Peripheral</a></li>
 <li class="toctree-l3"><a class="reference internal" href="axi_jesd204_rx/">JESD204B/C Link Receive Peripheral</a></li>
@@ -231,6 +233,7 @@ Content on this topic
 <li class="toctree-l3"><a class="reference internal" href="xgt_wizard/">Xilinx FPGAs Transceivers Wizard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="versal_transceiver_subsystem/">AMD Versal Adaptive SoC Transceiver Subsystem</a></li>
 <li class="toctree-l3"><a class="reference internal" href="troubleshoot/troubleshoot_jesd204_tx/">Troubleshooting JESD204 TX links</a></li>
+<li class="toctree-l3"><a class="reference internal" href="component_testbenches/">JESD204 Component-Level Testbenches</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-3" id="toctree-collapse-2-3"/><div class="collapse"><a class="reference internal" href="../spi_engine/">SPI Engine</a><label for="toctree-collapse-2-3"><div class="icon"></div></label></div><ul>
@@ -247,13 +250,13 @@ Content on this topic
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../axi_ad35xxr/">AXI AD35XXR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../axi_ad408x/">AXI AD408x</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../axi_ad485x/">AXI AD485x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../axi_ad408x/">AXI AD408X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../axi_ad485x/">AXI AD485X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../axi_ad7405/">AXI AD7405</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../axi_ad7606x/">AXI AD7606x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../axi_ad7606x/">AXI AD7606X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../axi_ad7616/">AXI AD7616</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../axi_ad7768/">AXI AD7768</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../axi_ad777x/">AXI AD777x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../axi_ad777x/">AXI AD777X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../axi_ad9265/">AXI AD9265</a></li>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-4" id="toctree-collapse-2-4"/><div class="collapse"><a class="reference internal" href="../axi_ad9361/">AXI AD9361</a><label for="toctree-collapse-2-4"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../axi_ad9361/tdd_support/">TDD Mode Support</a></li>
@@ -301,6 +304,7 @@ Content on this topic
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../spi_slave/">SPI Slave</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../util_axis_fifo/">AXI Stream FIFO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../util_axis_fifo_asym/">Asymmetric AXI Stream FIFO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../util_extract/">Util Extract</a></li>
@@ -311,7 +315,11 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../util_sigma_delta_spi/">Util Sigma Delta SPI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../util_var_fifo/">Util VAR FIFO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../util_wfifo/">Util WFIFO</a></li>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-7" id="toctree-collapse-2-7"/><div class="collapse"><a class="reference internal" href="../xilinx/">AMD Xilinx Specific IPs</a><label for="toctree-collapse-2-7"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-7" id="toctree-collapse-2-7"/><div class="collapse"><a class="reference internal" href="../intel/">Intel Specific IPs</a><label for="toctree-collapse-2-7"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../intel/util_clkdiv/">Util Clock Divider</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-8" id="toctree-collapse-2-8"/><div class="collapse"><a class="reference internal" href="../xilinx/">AMD Xilinx Specific IPs</a><label for="toctree-collapse-2-8"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../xilinx/util_adxcvr/">UTIL_ADXCVR</a></li>
 </ul>
 </li>
@@ -330,7 +338,7 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad4062_ardz/">AD4062-ARDZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad4080_fmc_evb/">AD4080-FMC-EVB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad4110/">AD4110-SDZ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../projects/ad411x_ad717x/">AD411x-AD717x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/ad411x_ad717x/">AD411X-AD717X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad4134_fmc/">AD4134-FMC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad4170_asdz/">AD4170-ASDZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad4630_fmc/">AD4630-FMC</a></li>
@@ -357,7 +365,7 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad9081_fmca_ebz_x_band/">AD9081-FMCA-EBZ-X-BAND</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad9083_evb/">AD9083-EVB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad9084_ebz/">AD9084-EBZ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../projects/ad916x_fmc/">AD916x-FMC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/ad916x_fmc/">AD916X-FMC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad9208_dual_ebz/">AD9208-DUAL-EBZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad9209_fmca_ebz/">AD9209-FMCA-EBZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad9213_dual_ebz/">AD9213-DUAL-EBZ</a></li>
@@ -374,6 +382,7 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adaq23875/">ADAQ23875</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adaq7980_sdz/">ADAQ7980-SDZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adaq8092_fmc/">ADAQ8092-FMC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/adar3000/">ADAR3000</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/admx100x_evb/">ADMX100X-EVB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/admx6001_ebz/">ADMX6001-EBZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adrd8012_01z/">ADRD8012-01Z</a></li>
@@ -382,11 +391,11 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adrv9009/">ADRV9009</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adrv9009zu11eg/">ADRV9009-ZU11EG</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adrv9026/">ADRV9026</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../projects/adrv903x/">ADRV903x</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../projects/adrv904x/">ADRV904x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/adrv903x/">ADRV903X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/adrv904x/">ADRV904X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adrv9361z7035/">ADRV9361Z7035</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adrv9364z7020/">ADRV9364Z7020</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../projects/adrv9371x/">ADRV9371x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/adrv9371x/">ADRV9371X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adv7511/">ADV7511</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adv7513/">ADV7513</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/arradio/">ARRADIO</a></li>
@@ -415,6 +424,7 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../../projects/max96724/">MAX96724</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/pluto/">PLUTO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/quad_adaq77681/">QUAD_ADAQ7768-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/quad_quad_mxfe/">QUAD-QUAD-MXFE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/pulsar_adc/">PULSAR-ADC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/pulsar_lvds_adc/">PULSAR-LVDS-ADC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/admx6020m/">ADMX6020M</a></li>
@@ -448,6 +458,7 @@ Content on this topic
 <span id="jesd204"></span><h1>JESD204 Interface Framework<a class="headerlink" href="#jesd204-interface-framework" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="system_architecture/">System Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generic_jesd_bds/">Generic JESD204 block designs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="axi_jesd204_tx/">JESD204B/C Link Transmit Peripheral</a></li>
 <li class="toctree-l1"><a class="reference internal" href="axi_jesd204_rx/">JESD204B/C Link Receive Peripheral</a></li>
@@ -456,6 +467,7 @@ Content on this topic
 <li class="toctree-l1"><a class="reference internal" href="xgt_wizard/">Xilinx FPGAs Transceivers Wizard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="versal_transceiver_subsystem/">AMD Versal Adaptive SoC Transceiver Subsystem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshoot/troubleshoot_jesd204_tx/">Troubleshooting JESD204 TX links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="component_testbenches/">JESD204 Component-Level Testbenches</a></li>
 </ul>
 </div>
 <p>The JESD204, JESD204A, JESD204B and the JESD204C data converter serial interface
@@ -799,8 +811,8 @@ Linux driver for the JESD204B transmit core.</p></li>
 <li><p><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/tools-software/linux-drivers/jesd204/axi_jesd204_rx" target="_blank">JESD204B/C Receive Linux Driver</a>:
 Linux driver for the JESD204B receive core.</p></li>
 <li><p><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/tools-software/linux-drivers/jesd204/axi_adxcvr" target="_blank">JESD204B/C AXI_ADXCVR Highspeed Transceivers Linux Driver</a></p></li>
-<li><p><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/tools-software/linux-software/jesd_eye_scan" target="_blank">JESD204B Statistical Eyescan Application</a></p></li>
-<li><p><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/tools-software/linux-software/jesd_status" target="_blank">JESD204B Status Utility</a></p></li>
+<li><p><a class="icon link reference external" href="https://analogdevicesinc.github.io/system-level/software/jesd/jesd_eye_scan/#software-jesd-eye-scan" target="_blank" title="(in System Level Documentation)"><span class="xref std std-ref">JESD204B Statistical Eyescan Application</span></a></p></li>
+<li><p><a class="icon link reference external" href="https://analogdevicesinc.github.io/system-level/software/jesd/jesd_status/#software-jesd-status" target="_blank" title="(in System Level Documentation)"><span class="xref std std-ref">JESD204B Status Utility</span></a></p></li>
 <li><p><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/tools-software/linux-drivers/iio-dds/axi-dac-dds-hdl" target="_blank">AXI DAC HDL Linux Driver</a></p>
 <ul>
 <li><p><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/tools-software/linux-drivers/iio-dds/ad9172" target="_blank">AD9172 DAC Linux Driver</a></p></li>
@@ -833,7 +845,7 @@ Linux driver for the JESD204B receive core.</p></li>
 <section id="tutorial">
 <h2>Tutorial<a class="headerlink" href="#tutorial" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/fpga/peripherals/jesd204/tutorial/system_architecture" target="_blank">System Architecture</a></p></li>
+<li><p><a class="reference internal" href="system_architecture/#jesd204-system-architecture"><span class="std std-ref">System Architecture</span></a></p></li>
 <li><p><a class="reference internal" href="generic_jesd_bds/#generic-jesd-bds"><span class="std std-ref">Generic JESD204 block designs</span></a>.
 This will help you understand the generic blocks for the next steps.</p></li>
 <li><p>Checkout the <a class="reference internal" href="../../user_guide/build_hdl/#build-hdl"><span class="std std-ref">HDL Source</span></a>, and then build either one of:</p>
@@ -904,13 +916,13 @@ This will help you understand the generic blocks for the next steps.</p></li>
 </li>
 <li><p><a class="reference internal" href="../../projects/adrv9009zu11eg/#adrv9009zu11eg"><span class="std std-ref">ADRV9009-ZU11EG-SOM Reference Design</span></a> on:</p>
 <ul>
-<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/projects/adrv9009zu11eg/a10soc" target="_blank">Intel Arria 10 SoC</a></p></li>
-<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/hdl_2021_r1/projects/adrv9009zu11eg/a10gx" target="_blank">Intel A10Gx (RETIRED)</a></p></li>
-<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/projects/adrv9009zu11eg/zc706" target="_blank">AMD Xilinx ZC706</a></p></li>
+<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/projects/adrv9009zu11eg/adrv2crr_fmc" target="_blank">ADRV2CRR-FMC</a></p></li>
+<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/projects/adrv9009zu11eg/adrv2crr_fmcomms8" target="_blank">ADRV2CRR-FMC + FMCOMMS8</a></p></li>
+<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/projects/adrv9009zu11eg/adrv2crr_fmcxmwbr1" target="_blank">ADRV2CRR-FMC + FMCXMWBR1</a></p></li>
 <li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/projects/adrv9009zu11eg" target="_blank">ADRV9009-ZU11EG-SOM</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="../../projects/dac_fmc_ebz/#dac-fmc-ebz"><span class="std std-ref">AD913x/AD917x/AD9144/AD915x Reference Design (dac_fmc_ebz)</span></a> on:</p>
+<li><p><a class="reference internal" href="../../projects/dac_fmc_ebz/#dac-fmc-ebz"><span class="std std-ref">AD913X/AD917X/AD9144/AD915X Reference Design (dac_fmc_ebz)</span></a> on:</p>
 <ul>
 <li><p>See the <a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/projects/dac_fmc_ebz#readme" target="_blank">list of supported parts</a></p></li>
 <li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/projects/dac_fmc_ebz/a10soc" target="_blank">Intel Arria 10 SoC</a></p></li>
@@ -919,7 +931,7 @@ This will help you understand the generic blocks for the next steps.</p></li>
 <li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/projects/dac_fmc_ebz/zcu102" target="_blank">AMD Xilinx ZCU102</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="../../projects/ad916x_fmc/#ad916x-fmc"><span class="std std-ref">AD916x Reference Design</span></a> on:</p>
+<li><p><a class="reference internal" href="../../projects/ad916x_fmc/#ad916x-fmc"><span class="std std-ref">AD916X Reference Design</span></a> on:</p>
 <ul>
 <li><p>See the <a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/projects/ad916x_fmc#readme" target="_blank">list of supported parts</a></p></li>
 <li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/projects/ad916x_fmc/zcu102" target="_blank">AMD Xilinx ZCU102</a></p></li>
@@ -996,14 +1008,12 @@ This will help you understand the generic blocks for the next steps.</p></li>
 <li><p><a class="reference internal" href="../../projects/adrv9026/#adrv9026"><span class="std std-ref">ADRV9026 Reference Design</span></a> on:</p>
 <ul>
 <li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/projects/adrv9026/a10soc" target="_blank">Intel Arria 10 SoC</a></p></li>
-<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/projects/adrv9026/vck190" target="_blank">AMD Xilinx VCK190</a></p></li>
 <li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/projects/adrv9026/vcu118" target="_blank">AMD Xilinx VCU118</a></p></li>
 <li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/projects/adrv9026/zcu102" target="_blank">AMD Xilinx ZCU102</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="../../projects/adrv904x/#adrv904x"><span class="std std-ref">ADRV904x Reference Design</span></a> on:</p>
+<li><p><a class="reference internal" href="../../projects/adrv904x/#adrv904x"><span class="std std-ref">ADRV904X Reference Design</span></a> on:</p>
 <ul>
-<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/projects/adrv904x/vck190" target="_blank">AMD Xilinx VCK190</a></p></li>
 <li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/projects/adrv904x/zcu102" target="_blank">AMD Xilinx ZCU102</a></p></li>
 </ul>
 </li>
@@ -1020,12 +1030,12 @@ This will help you understand the generic blocks for the next steps.</p></li>
 <ul class="simple">
 <li><p><a class="icon adi reference external" href="https://www.analog.com/AD-FMCOMMS11-EBZ" target="_blank">AD-FMCOMMS11-EBZ</a> <a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms11-ebz" target="_blank">(User Guide)</a></p></li>
 <li><p><a class="icon adi reference external" href="https://www.analog.com/ADRV9009-ZU11EG" target="_blank">ADRV9009-ZU11EG</a> <a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/adrv9009-zu11eg" target="_blank">ADRV9009-ZU11EG (User Guide)</a></p></li>
-<li><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-AD-FMCADC2-EBZ" target="_blank">EVAL-AD-FMCADC2-EBZ</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/AD-FMCADC2-EBZ" target="_blank">AD-FMCADC2-EBZ</a></p></li>
 <li><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-AD-FMCADC3-EBZ" target="_blank">EVAL-AD-FMCADC3-EBZ</a> (RETIRED)</p></li>
 <li><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-AD-FMCADC4-EBZ" target="_blank">EVAL-AD-FMCADC4-EBZ</a> (RETIRED)</p></li>
 <li><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-AD-FMCDAQ2-EBZ" target="_blank">EVAL-AD-FMCDAQ2-EBZ</a> <a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcdaq2-ebz" target="_blank">(User Guide)</a></p></li>
 <li><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-AD-FMCJESDADC1-EBZ" target="_blank">EVAL-AD-FMCJESDADC1-EBZ</a></p></li>
-<li><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9172" target="_blank">EVAL-AD917x</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9172" target="_blank">EVAL-AD917X</a></p></li>
 <li><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-ADRV9008-9009" target="_blank">EVAL-ADRV9008-9009</a> <a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/adrv9009" target="_blank">(User Guide)</a></p></li>
 <li><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-ADRV9371" target="_blank">EVAL-ADRV9371</a> <a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/mykonos" target="_blank">(User Guide)</a></p></li>
 <li><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-FMCDAQ3-EBZ" target="_blank">EVAL-FMCDAQ3-EBZ</a></p></li>
@@ -1132,7 +1142,7 @@ This will help you understand the generic blocks for the next steps.</p></li>
               <div class="related">
                 &nbsp;
     <a href="../i3c_controller/interface/" title="Previous document (Alt+Shift+LeftArrow)" class="prev">Control Interface</a>
-    <a href="generic_jesd_bds/" title="Next document (Alt+Shift+RightArrow)" class="next">Generic JESD204 block designs</a>
+    <a href="system_architecture/" title="Next document (Alt+Shift+RightArrow)" class="next">System Architecture</a>
               </div>
           
         </div>

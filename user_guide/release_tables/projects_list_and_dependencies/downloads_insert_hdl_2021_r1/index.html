@@ -8,8 +8,8 @@
 
     <title>Projects list and dependencies for hdl_2021_r1 &#8212; HDL  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/app.min.css?v=fb8972a4" />
-    <script async="async" src="../../../../_static/app.umd.js?v=8c78863f"></script>
+    <link rel="stylesheet" type="text/css" href="../../../../_static/app.min.css?v=a3ee7af8" />
+    <script async="async" src="../../../../_static/app.umd.js?v=048c1170"></script>
     <link rel="icon" href="../../../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../../../genindex/" />
     <link rel="search" title="Search" href="../../../../search/" />
@@ -103,7 +103,7 @@
 <li><a class="reference internal" href="#ad5766sdz">AD5766SDZ</a></li>
 <li><a class="reference internal" href="#ad6676evb">AD6676EVB</a></li>
 <li><a class="reference internal" href="#ad7134fmc">AD7134FMC</a></li>
-<li><a class="reference internal" href="#ad738xfmc">AD738xFMC</a></li>
+<li><a class="reference internal" href="#ad738xfmc">AD738XFMC</a></li>
 <li><a class="reference internal" href="#ad7405fmc">AD7405FMC</a></li>
 <li><a class="reference internal" href="#ad7616sdz">AD7616SDZ</a></li>
 <li><a class="reference internal" href="#ad77681evb">AD77681EVB</a></li>
@@ -215,6 +215,7 @@ Content on this topic
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../build_hdl/">Build an HDL project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../build_boot_bin/">Build the BOOT.BIN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../build_boot_scr/">Build the boot.scr</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../build_intel_boot_image/">Build the Intel Boot Image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../architecture/">HDL architecture</a></li>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-1-2" id="toctree-collapse-1-2"/><div class="collapse"><a class="reference internal" href="../../../ip_cores/">IP cores</a><label for="toctree-collapse-1-2"><div class="icon"></div></label></div><ul>
@@ -246,6 +247,7 @@ Content on this topic
 </ul>
 </li>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-2" id="toctree-collapse-2-2"/><div class="collapse"><a class="reference internal" href="../../../../library/jesd204/">JESD204 Interface Framework</a><label for="toctree-collapse-2-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../library/jesd204/system_architecture/">System Architecture</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../library/jesd204/generic_jesd_bds/">Generic JESD204 block designs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../library/jesd204/axi_jesd204_tx/">JESD204B/C Link Transmit Peripheral</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../library/jesd204/axi_jesd204_rx/">JESD204B/C Link Receive Peripheral</a></li>
@@ -254,6 +256,7 @@ Content on this topic
 <li class="toctree-l3"><a class="reference internal" href="../../../../library/jesd204/xgt_wizard/">Xilinx FPGAs Transceivers Wizard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../library/jesd204/versal_transceiver_subsystem/">AMD Versal Adaptive SoC Transceiver Subsystem</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../library/jesd204/troubleshoot/troubleshoot_jesd204_tx/">Troubleshooting JESD204 TX links</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../library/jesd204/component_testbenches/">JESD204 Component-Level Testbenches</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-3" id="toctree-collapse-2-3"/><div class="collapse"><a class="reference internal" href="../../../../library/spi_engine/">SPI Engine</a><label for="toctree-collapse-2-3"><div class="icon"></div></label></div><ul>
@@ -270,13 +273,13 @@ Content on this topic
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../library/axi_ad35xxr/">AXI AD35XXR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../library/axi_ad408x/">AXI AD408x</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../library/axi_ad485x/">AXI AD485x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../library/axi_ad408x/">AXI AD408X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../library/axi_ad485x/">AXI AD485X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../library/axi_ad7405/">AXI AD7405</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../library/axi_ad7606x/">AXI AD7606x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../library/axi_ad7606x/">AXI AD7606X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../library/axi_ad7616/">AXI AD7616</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../library/axi_ad7768/">AXI AD7768</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../library/axi_ad777x/">AXI AD777x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../library/axi_ad777x/">AXI AD777X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../library/axi_ad9265/">AXI AD9265</a></li>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-4" id="toctree-collapse-2-4"/><div class="collapse"><a class="reference internal" href="../../../../library/axi_ad9361/">AXI AD9361</a><label for="toctree-collapse-2-4"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../library/axi_ad9361/tdd_support/">TDD Mode Support</a></li>
@@ -324,6 +327,7 @@ Content on this topic
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../library/spi_slave/">SPI Slave</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../library/util_axis_fifo/">AXI Stream FIFO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../library/util_axis_fifo_asym/">Asymmetric AXI Stream FIFO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../library/util_extract/">Util Extract</a></li>
@@ -334,7 +338,11 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../../../../library/util_sigma_delta_spi/">Util Sigma Delta SPI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../library/util_var_fifo/">Util VAR FIFO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../library/util_wfifo/">Util WFIFO</a></li>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-7" id="toctree-collapse-2-7"/><div class="collapse"><a class="reference internal" href="../../../../library/xilinx/">AMD Xilinx Specific IPs</a><label for="toctree-collapse-2-7"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-7" id="toctree-collapse-2-7"/><div class="collapse"><a class="reference internal" href="../../../../library/intel/">Intel Specific IPs</a><label for="toctree-collapse-2-7"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../library/intel/util_clkdiv/">Util Clock Divider</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-8" id="toctree-collapse-2-8"/><div class="collapse"><a class="reference internal" href="../../../../library/xilinx/">AMD Xilinx Specific IPs</a><label for="toctree-collapse-2-8"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../library/xilinx/util_adxcvr/">UTIL_ADXCVR</a></li>
 </ul>
 </li>
@@ -353,7 +361,7 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/ad4062_ardz/">AD4062-ARDZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/ad4080_fmc_evb/">AD4080-FMC-EVB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/ad4110/">AD4110-SDZ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../projects/ad411x_ad717x/">AD411x-AD717x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../projects/ad411x_ad717x/">AD411X-AD717X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/ad4134_fmc/">AD4134-FMC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/ad4170_asdz/">AD4170-ASDZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/ad4630_fmc/">AD4630-FMC</a></li>
@@ -380,7 +388,7 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/ad9081_fmca_ebz_x_band/">AD9081-FMCA-EBZ-X-BAND</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/ad9083_evb/">AD9083-EVB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/ad9084_ebz/">AD9084-EBZ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../projects/ad916x_fmc/">AD916x-FMC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../projects/ad916x_fmc/">AD916X-FMC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/ad9208_dual_ebz/">AD9208-DUAL-EBZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/ad9209_fmca_ebz/">AD9209-FMCA-EBZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/ad9213_dual_ebz/">AD9213-DUAL-EBZ</a></li>
@@ -397,6 +405,7 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/adaq23875/">ADAQ23875</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/adaq7980_sdz/">ADAQ7980-SDZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/adaq8092_fmc/">ADAQ8092-FMC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../projects/adar3000/">ADAR3000</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/admx100x_evb/">ADMX100X-EVB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/admx6001_ebz/">ADMX6001-EBZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/adrd8012_01z/">ADRD8012-01Z</a></li>
@@ -405,11 +414,11 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/adrv9009/">ADRV9009</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/adrv9009zu11eg/">ADRV9009-ZU11EG</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/adrv9026/">ADRV9026</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../projects/adrv903x/">ADRV903x</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../projects/adrv904x/">ADRV904x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../projects/adrv903x/">ADRV903X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../projects/adrv904x/">ADRV904X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/adrv9361z7035/">ADRV9361Z7035</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/adrv9364z7020/">ADRV9364Z7020</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../projects/adrv9371x/">ADRV9371x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../projects/adrv9371x/">ADRV9371X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/adv7511/">ADV7511</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/adv7513/">ADV7513</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/arradio/">ARRADIO</a></li>
@@ -438,6 +447,7 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/max96724/">MAX96724</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/pluto/">PLUTO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/quad_adaq77681/">QUAD_ADAQ7768-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../projects/quad_quad_mxfe/">QUAD-QUAD-MXFE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/pulsar_adc/">PULSAR-ADC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/pulsar_lvds_adc/">PULSAR-LVDS-ADC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../projects/admx6020m/">ADMX6020M</a></li>
@@ -574,7 +584,7 @@ Content on this topic
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="icon adi reference external" href="https://www.analog.com/eval-ad4696-fmc" target="_blank">AD469XFMC</a></p></td>
+<tr class="row-even"><td><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-AD4696FMCZ" target="_blank">AD469XFMC</a></p></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/hdl_2021_r1/projects/ad469x_fmc" target="_blank">ad469x_fmc</a></p></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/hdl_2021_r1/projects/ad469x_fmc/zed" target="_blank">zed</a></p></td>
 <td><p>ad469x_fmc_zed</p></td>
@@ -754,7 +764,7 @@ Content on this topic
 </div>
 </section>
 <section id="ad738xfmc">
-<h2>AD738xFMC<a class="headerlink" href="#ad738xfmc" title="Link to this heading"></a></h2>
+<h2>AD738XFMC<a class="headerlink" href="#ad738xfmc" title="Link to this heading"></a></h2>
 <div class="table-wrapper colwidths-given docutils container">
 <table class="docutils align-default">
 <colgroup>
@@ -773,7 +783,7 @@ Content on this topic
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="icon adi reference external" href="https://www.analog.com/eval-ad738xfmcz" target="_blank">AD738xFMC</a></p></td>
+<tr class="row-even"><td><p><a class="icon adi reference external" href="https://www.analog.com/eval-ad738xfmcz" target="_blank">AD738XFMC</a></p></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/hdl_2021_r1/projects/ad738x_fmc" target="_blank">ad738x_fmc</a></p></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/hdl_2021_r1/projects/ad738x_fmc/zed" target="_blank">zed</a></p></td>
 <td><p><a class="reference internal" href="../../resource_utilization/resource_utilization_table_hdl_2021_r1/#util-hdl-2021-r1-ad738x-fmc-zed"><span class="std std-ref">ad738x_fmc_zed</span></a></p></td>
@@ -1493,7 +1503,7 @@ ad9083_evb_zcu102</p></td>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="icon adi reference external" href="https://www.analog.com/ad-quasmxfe1-ebz" target="_blank">ADQUADMXFE1EBZ</a></p></td>
+<tr class="row-even"><td><p><a class="icon adi reference external" href="https://www.analog.com/ADQUADMXFE1EBZ" target="_blank">ADQUADMXFE1EBZ</a></p></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/hdl_2021_r1/projects/ad_quadmxfe1_ebz" target="_blank">ad_quadmxfe1_ebz</a></p></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/hdl_2021_r1/projects/ad_quadmxfe1_ebz/vcu118" target="_blank">vcu118</a></p></td>
 <td><p><a class="reference internal" href="../../resource_utilization/resource_utilization_table_hdl_2021_r1/#util-hdl-2021-r1-ad-quadmxfe1-ebz-vcu118"><span class="std std-ref">ad_quadmxfe1_ebz_vcu118</span></a></p></td>
@@ -1576,7 +1586,7 @@ ad9083_evb_zcu102</p></td>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="icon adi reference external" href="https://www.analog.com/eval-adaq9082-fmc" target="_blank">ADAQ8092-FMC</a></p></td>
+<tr class="row-even"><td><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-ADAQ8092-FMCZ" target="_blank">ADAQ8092-FMC</a></p></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/hdl_2021_r1/projects/adaq8092_fmc" target="_blank">adaq8092_fmc</a></p></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/hdl_2021_r1/projects/adaq8092_fmc/zed" target="_blank">zed</a></p></td>
 <td><p><a class="reference internal" href="../../resource_utilization/resource_utilization_table_hdl_2021_r1/#util-hdl-2021-r1-adaq8092-fmc-zed"><span class="std std-ref">adaq8092_fmc_zed</span></a></p></td>
@@ -1614,7 +1624,7 @@ ad9083_evb_zcu102</p></td>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="icon adi reference external" href="https://www.analog.com/eval-adrv9001" target="_blank">AD-ADRV9001</a></p></td>
+<tr class="row-even"><td><p><a class="icon adi reference external" href="https://www.analog.com/ADRV9001" target="_blank">ADRV9001</a></p></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/hdl_2021_r1/projects/adrv9001" target="_blank">adrv9001</a></p></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/hdl_2021_r1/projects/adrv9001/a10soc" target="_blank">a10soc</a>
 <a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/hdl_2021_r1/projects/adrv9001/zc706" target="_blank">zc706</a>
@@ -1924,7 +1934,7 @@ NA
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="icon adi reference external" href="https://www.analog.com/CN0501" target="_blank">CN0501</a></p></td>
+<tr class="row-even"><td><p>CN0501</p></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/hdl_2021_r1/projects/cn0501" target="_blank">cn0501</a></p></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/hdl_2021_r1/projects/cn0501/coraz7s" target="_blank">coraz7s</a></p></td>
 <td><p><a class="reference internal" href="../../resource_utilization/resource_utilization_table_hdl_2021_r1/#util-hdl-2021-r1-cn0501-coraz7s"><span class="std std-ref">cn0501_coraz7s</span></a></p></td>
@@ -2230,7 +2240,7 @@ NA</p></td>
 <td></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/hdl_2021_r1/library/axi_hdmi_tx" target="_blank">axi_hdmi_tx</a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-AD916x" target="_blank">EVAL-AD916x</a></p></td>
+<tr class="row-odd"><td><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-AD916X" target="_blank">EVAL-AD916X</a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2744,7 +2754,7 @@ fmcomms8_zcu102</p></td>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="icon adi reference external" href="https://www.analog.com/ADALM-PLUTO-NG" target="_blank">ADALM-PLUTO-NG</a></p></td>
+<tr class="row-even"><td><p><a class="icon adi reference external" href="https://www.analog.com/ADALM-PLUTO" target="_blank">ADALM-PLUTO</a></p></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/hdl_2021_r1/projects/pluto_ng" target="_blank">pluto_ng</a></p></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/hdl_2021_r1/projects/pluto_ng" target="_blank">pluto_ng</a></p></td>
 <td><p>pluto_ng_pluto_ng</p></td>
@@ -2778,7 +2788,7 @@ fmcomms8_zcu102</p></td>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="icon adi reference external" href="https://www.analog.com/pulsar_adc_evaluation_tools" target="_blank">PULSAR-ADC-PMDZ</a></p></td>
+<tr class="row-even"><td><p><a class="icon adi reference external" href="https://www.analog.com/en/resources/evaluation-hardware-and-software/evaluation-boards-kits/PulsarPMODs.html" target="_blank">PULSAR-ADC-PMDZ</a></p></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/hdl_2021_r1/projects/pulsar_adc_pmdz" target="_blank">pulsar_adc_pmdz</a></p></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/hdl_2021_r1/projects/pulsar_adc_pmdz/coraz7s" target="_blank">coraz7s</a></p></td>
 <td><p><a class="reference internal" href="../../resource_utilization/resource_utilization_table_hdl_2021_r1/#util-hdl-2021-r1-pulsar-adc-pmdz-coraz7s"><span class="std std-ref">pulsar_adc_pmdz_coraz7s</span></a></p></td>
@@ -2801,7 +2811,7 @@ fmcomms8_zcu102</p></td>
 <li><p>The <a class="reference internal" href="../../../build_hdl/#build-hdl"><span class="std std-ref">carriers (abbreviations can be found here)</span></a> are commonly available FPGA evaluation boards.</p></li>
 <li><p>The <a class="reference internal" href="../../../#user-guide"><span class="std std-ref">HDL user guide</span></a> contains all the documentation, build instructions and register map tables.</p></li>
 <li><p>The following quick links allows you to browse the github repository for a list of current <a class="icon link reference external" href="http://github.com/analogdevicesinc/hdl/branches/active" target="_blank">branches</a>, <a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/master/library" target="_blank">library components</a>, and <a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/master/projects" target="_blank">projects</a>.</p></li>
-<li><p>Questions? We can help with <a class="icon link reference external" href="https://ez.analog.com/community/fpga" target="_blank">FPGA questions</a>, <a class="icon link reference external" href="https://ez.analog.com/community/linux-device-drivers/linux-software-drivers" target="_blank">Linux driver questions</a>, <a class="icon link reference external" href="https://ez.analog.com/community/linux-device-drivers/microcontroller-no-os-drivers" target="_blank">No-OS Drivers questions</a>.</p></li>
+<li><p>Questions? We can help with <a class="icon link reference external" href="https://ez.analog.com/community/fpga" target="_blank">FPGA questions</a>, <a class="icon link reference external" href="https://ez.analog.com/linux-software-drivers/" target="_blank">Linux driver questions</a>, <a class="icon link reference external" href="https://ez.analog.com/microcontroller-no-os-drivers/" target="_blank">No-OS Drivers questions</a>.</p></li>
 </ul>
 </section>
 </section>

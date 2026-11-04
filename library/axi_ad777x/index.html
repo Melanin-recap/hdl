@@ -4,12 +4,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="The AXI AD777x IP core can be used to interface the AD7770, AD7771 and AD7779 converters using an FPGA in 1, 2, or 4 data lines active. More about the generic framework interfacing ADCs, that contains the up_adc_channel and up_adc_common modules, can be read in Generic AXI ADC." name="description" />
+<meta content="The AXI AD777X IP core can be used to interface the AD7770, AD7771 and AD7779 converters using an FPGA in 1, 2, or 4 data lines active. More about the generic framework interfacing ADCs, that contains the up_adc_channel and up_adc_common modules, can be read in Generic AXI ADC." name="description" />
 
-    <title>AXI AD777x &#8212; HDL  documentation</title>
+    <title>AXI AD777X &#8212; HDL  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/app.min.css?v=fb8972a4" />
-    <script async="async" src="../../_static/app.umd.js?v=8c78863f"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/app.min.css?v=a3ee7af8" />
+    <script async="async" src="../../_static/app.umd.js?v=048c1170"></script>
     <link rel="icon" href="../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
@@ -95,7 +95,7 @@
         </div>
         <nav>
           <ul>
-<li><a class="reference internal" href="#">AXI AD777x</a><ul>
+<li><a class="reference internal" href="#">AXI AD777X</a><ul>
 <li><a class="reference internal" href="#features">Features</a></li>
 <li><a class="reference internal" href="#files">Files</a></li>
 <li><a class="reference internal" href="#block-diagram">Block Diagram</a></li>
@@ -170,6 +170,7 @@ Content on this topic
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/build_hdl/">Build an HDL project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/build_boot_bin/">Build the BOOT.BIN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/build_boot_scr/">Build the boot.scr</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/build_intel_boot_image/">Build the Intel Boot Image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/architecture/">HDL architecture</a></li>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-1-2" id="toctree-collapse-1-2"/><div class="collapse"><a class="reference internal" href="../../user_guide/ip_cores/">IP cores</a><label for="toctree-collapse-1-2"><div class="icon"></div></label></div><ul>
@@ -201,6 +202,7 @@ Content on this topic
 </ul>
 </li>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-2" id="toctree-collapse-2-2"/><div class="collapse"><a class="reference internal" href="../jesd204/">JESD204 Interface Framework</a><label for="toctree-collapse-2-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../jesd204/system_architecture/">System Architecture</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../jesd204/generic_jesd_bds/">Generic JESD204 block designs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../jesd204/axi_jesd204_tx/">JESD204B/C Link Transmit Peripheral</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../jesd204/axi_jesd204_rx/">JESD204B/C Link Receive Peripheral</a></li>
@@ -209,6 +211,7 @@ Content on this topic
 <li class="toctree-l3"><a class="reference internal" href="../jesd204/xgt_wizard/">Xilinx FPGAs Transceivers Wizard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../jesd204/versal_transceiver_subsystem/">AMD Versal Adaptive SoC Transceiver Subsystem</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../jesd204/troubleshoot/troubleshoot_jesd204_tx/">Troubleshooting JESD204 TX links</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jesd204/component_testbenches/">JESD204 Component-Level Testbenches</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-3" id="toctree-collapse-2-3"/><div class="collapse"><a class="reference internal" href="../spi_engine/">SPI Engine</a><label for="toctree-collapse-2-3"><div class="icon"></div></label></div><ul>
@@ -225,13 +228,13 @@ Content on this topic
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../axi_ad35xxr/">AXI AD35XXR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../axi_ad408x/">AXI AD408x</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../axi_ad485x/">AXI AD485x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../axi_ad408x/">AXI AD408X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../axi_ad485x/">AXI AD485X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../axi_ad7405/">AXI AD7405</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../axi_ad7606x/">AXI AD7606x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../axi_ad7606x/">AXI AD7606X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../axi_ad7616/">AXI AD7616</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../axi_ad7768/">AXI AD7768</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">AXI AD777x</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">AXI AD777X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../axi_ad9265/">AXI AD9265</a></li>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-4" id="toctree-collapse-2-4"/><div class="collapse"><a class="reference internal" href="../axi_ad9361/">AXI AD9361</a><label for="toctree-collapse-2-4"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../axi_ad9361/tdd_support/">TDD Mode Support</a></li>
@@ -279,6 +282,7 @@ Content on this topic
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../spi_slave/">SPI Slave</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../util_axis_fifo/">AXI Stream FIFO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../util_axis_fifo_asym/">Asymmetric AXI Stream FIFO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../util_extract/">Util Extract</a></li>
@@ -289,7 +293,11 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../util_sigma_delta_spi/">Util Sigma Delta SPI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../util_var_fifo/">Util VAR FIFO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../util_wfifo/">Util WFIFO</a></li>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-7" id="toctree-collapse-2-7"/><div class="collapse"><a class="reference internal" href="../xilinx/">AMD Xilinx Specific IPs</a><label for="toctree-collapse-2-7"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-7" id="toctree-collapse-2-7"/><div class="collapse"><a class="reference internal" href="../intel/">Intel Specific IPs</a><label for="toctree-collapse-2-7"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../intel/util_clkdiv/">Util Clock Divider</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-8" id="toctree-collapse-2-8"/><div class="collapse"><a class="reference internal" href="../xilinx/">AMD Xilinx Specific IPs</a><label for="toctree-collapse-2-8"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../xilinx/util_adxcvr/">UTIL_ADXCVR</a></li>
 </ul>
 </li>
@@ -308,7 +316,7 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad4062_ardz/">AD4062-ARDZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad4080_fmc_evb/">AD4080-FMC-EVB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad4110/">AD4110-SDZ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../projects/ad411x_ad717x/">AD411x-AD717x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/ad411x_ad717x/">AD411X-AD717X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad4134_fmc/">AD4134-FMC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad4170_asdz/">AD4170-ASDZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad4630_fmc/">AD4630-FMC</a></li>
@@ -335,7 +343,7 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad9081_fmca_ebz_x_band/">AD9081-FMCA-EBZ-X-BAND</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad9083_evb/">AD9083-EVB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad9084_ebz/">AD9084-EBZ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../projects/ad916x_fmc/">AD916x-FMC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/ad916x_fmc/">AD916X-FMC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad9208_dual_ebz/">AD9208-DUAL-EBZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad9209_fmca_ebz/">AD9209-FMCA-EBZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/ad9213_dual_ebz/">AD9213-DUAL-EBZ</a></li>
@@ -352,6 +360,7 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adaq23875/">ADAQ23875</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adaq7980_sdz/">ADAQ7980-SDZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adaq8092_fmc/">ADAQ8092-FMC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/adar3000/">ADAR3000</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/admx100x_evb/">ADMX100X-EVB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/admx6001_ebz/">ADMX6001-EBZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adrd8012_01z/">ADRD8012-01Z</a></li>
@@ -360,11 +369,11 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adrv9009/">ADRV9009</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adrv9009zu11eg/">ADRV9009-ZU11EG</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adrv9026/">ADRV9026</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../projects/adrv903x/">ADRV903x</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../projects/adrv904x/">ADRV904x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/adrv903x/">ADRV903X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/adrv904x/">ADRV904X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adrv9361z7035/">ADRV9361Z7035</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adrv9364z7020/">ADRV9364Z7020</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../projects/adrv9371x/">ADRV9371x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/adrv9371x/">ADRV9371X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adv7511/">ADV7511</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/adv7513/">ADV7513</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/arradio/">ARRADIO</a></li>
@@ -393,6 +402,7 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../../projects/max96724/">MAX96724</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/pluto/">PLUTO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/quad_adaq77681/">QUAD_ADAQ7768-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/quad_quad_mxfe/">QUAD-QUAD-MXFE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/pulsar_adc/">PULSAR-ADC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/pulsar_lvds_adc/">PULSAR-LVDS-ADC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/admx6020m/">ADMX6020M</a></li>
@@ -423,10 +433,10 @@ Content on this topic
           <div class="body" role="main">
             
   <section id="axi-ad777x">
-<span id="id1"></span><h1>AXI AD777x<a class="headerlink" href="#axi-ad777x" title="Link to this heading"></a></h1>
+<span id="id1"></span><h1>AXI AD777X<a class="headerlink" href="#axi-ad777x" title="Link to this heading"></a></h1>
 <div><section id="hdl-component-diagram">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 516 276" width="516" class="no-background"><rect x="18" y="18" width="480" height="240" rx="18" stroke="#666" fill="none" stroke-width="3" stroke-dasharray="8 16" stroke-linecap="round"/><text style="font: 64px sans-serif" fill="#666" text-anchor="middle" dominant-baseline="middle" x="258.0" y="94.4">?</text><text style="font: 16px sans-serif" fill="#666" text-anchor="middle" dominant-baseline="middle" x="258.0" y="150.4">axi_ad777x IP-XACT not found.</text><text style="font: 12.0px sans-serif" fill="#666" text-anchor="middle" dominant-baseline="middle" x="258.0" y="178.4">Generate it and the documentation:</text><text style="font: 12.0px monospace" fill="#666" text-anchor="middle" dominant-baseline="middle" x="258.0" y="198.4">(cd library/axi_ad777x; make)</text><text style="font: 12.0px monospace" fill="#666" text-anchor="middle" dominant-baseline="middle" x="258.0" y="218.4">(cd docs; make dirhtml)</text></svg></section>
-</div><p>The <a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/library/axi_ad777x" target="_blank">AXI AD777x</a> IP core
+</div><p>The <a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/library/axi_ad777x" target="_blank">AXI AD777X</a> IP core
 can be used to interface the <a class="icon adi reference external" href="https://www.analog.com/AD7770" target="_blank">AD7770</a>, <a class="icon adi reference external" href="https://www.analog.com/AD7771" target="_blank">AD7771</a> and <a class="icon adi reference external" href="https://www.analog.com/AD7779" target="_blank">AD7779</a>
 converters using an FPGA in 1, 2, or 4 data lines active.
 More about the generic framework interfacing ADCs, that contains the
@@ -452,10 +462,10 @@ More about the generic framework interfacing ADCs, that contains the
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/library/axi_ad777x/axi_ad777x.v" target="_blank">library/axi_ad777x/axi_ad777x.v</a></p></td>
-<td><p>Verilog source for the AXI AD777x.</p></td>
+<td><p>Verilog source for the AXI AD777X.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/library/axi_ad777x/axi_ad777x_if.v" target="_blank">library/axi_ad777x/axi_ad777x_if.v</a></p></td>
-<td><p>Verilog source for the AXI AD777x interface module.</p></td>
+<td><p>Verilog source for the AXI AD777X interface module.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/library/axi_ad777x/axi_ad777x_ip.tcl" target="_blank">library/axi_ad777x/axi_ad777x_ip.tcl</a></p></td>
 <td><p>TCL script to generate the Vivado IP-integrator project.</p></td>
@@ -469,7 +479,7 @@ More about the generic framework interfacing ADCs, that contains the
 </section>
 <section id="block-diagram">
 <h2>Block Diagram<a class="headerlink" href="#block-diagram" title="Link to this heading"></a></h2>
-<img alt="AXI AD777x block diagram" src="../../_images/block_diagram16.svg" />
+<img alt="AXI AD777X block diagram" src="../../_images/block_diagram17.svg" />
 </section>
 <section id="configuration-parameters">
 <h2>Configuration Parameters<a class="headerlink" href="#configuration-parameters" title="Link to this heading"></a></h2>
@@ -593,18 +603,18 @@ More about the generic framework interfacing ADCs, that contains the
 </div></section>
 <section id="detailed-architecture">
 <h2>Detailed Architecture<a class="headerlink" href="#detailed-architecture" title="Link to this heading"></a></h2>
-<img alt="AXI AD777x detailed architecture" src="../../_images/detailed_architecture2.svg" />
+<img alt="AXI AD777X detailed architecture" src="../../_images/detailed_architecture2.svg" />
 </section>
 <section id="detailed-description">
 <h2>Detailed Description<a class="headerlink" href="#detailed-description" title="Link to this heading"></a></h2>
 <p>The top module, axi_ad777x, instantiates:</p>
 <ul class="simple">
-<li><p>The AD777x interface module</p></li>
+<li><p>The AD777X interface module</p></li>
 <li><p>The ADC channel register map</p></li>
 <li><p>The ADC common register map</p></li>
 <li><p>The AXI handling interface</p></li>
 </ul>
-<p>The AD777x interface module has as input the serial data lines, the ready_in
+<p>The AD777X interface module has as input the serial data lines, the ready_in
 signal and the interface clock. Data is deserialized according to the number
 of active lanes. The interface module also implements a parallel CRC check
 algorithm.
@@ -2227,7 +2237,7 @@ Where n is from 0 to 15.</p>
 </div></section>
 <section id="design-guidelines">
 <h2>Design Guidelines<a class="headerlink" href="#design-guidelines" title="Link to this heading"></a></h2>
-<p>The control of the ad777x chip is done through a SPI interface, which is needed
+<p>The control of the AD777X chip is done through a SPI interface, which is needed
 at system level.</p>
 <p>The <em>ADC interface signals</em> must be connected directly to the top file of the
 design, as IO primitives are part of the IP.</p>

@@ -8,8 +8,8 @@
 
     <title>AD4080-FMC-EVB HDL project &#8212; HDL  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/app.min.css?v=fb8972a4" />
-    <script async="async" src="../../_static/app.umd.js?v=8c78863f"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/app.min.css?v=a3ee7af8" />
+    <script async="async" src="../../_static/app.umd.js?v=048c1170"></script>
     <link rel="icon" href="../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
@@ -101,6 +101,7 @@
 <li><a class="reference internal" href="#supported-carriers">Supported carriers</a></li>
 <li><a class="reference internal" href="#block-design">Block design</a><ul>
 <li><a class="reference internal" href="#block-diagram">Block diagram</a></li>
+<li><a class="reference internal" href="#spi-slave-interface">SPI slave interface</a></li>
 <li><a class="reference internal" href="#clock-scheme">Clock scheme</a></li>
 <li><a class="reference internal" href="#cpu-memory-interconnects-addresses">CPU/Memory interconnects addresses</a></li>
 <li><a class="reference internal" href="#spi-connections">SPI connections</a></li>
@@ -181,6 +182,7 @@ Content on this topic
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/build_hdl/">Build an HDL project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/build_boot_bin/">Build the BOOT.BIN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/build_boot_scr/">Build the boot.scr</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/build_intel_boot_image/">Build the Intel Boot Image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/architecture/">HDL architecture</a></li>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-1-2" id="toctree-collapse-1-2"/><div class="collapse"><a class="reference internal" href="../../user_guide/ip_cores/">IP cores</a><label for="toctree-collapse-1-2"><div class="icon"></div></label></div><ul>
@@ -212,6 +214,7 @@ Content on this topic
 </ul>
 </li>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-2" id="toctree-collapse-2-2"/><div class="collapse"><a class="reference internal" href="../../library/jesd204/">JESD204 Interface Framework</a><label for="toctree-collapse-2-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../library/jesd204/system_architecture/">System Architecture</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../library/jesd204/generic_jesd_bds/">Generic JESD204 block designs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../library/jesd204/axi_jesd204_tx/">JESD204B/C Link Transmit Peripheral</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../library/jesd204/axi_jesd204_rx/">JESD204B/C Link Receive Peripheral</a></li>
@@ -220,6 +223,7 @@ Content on this topic
 <li class="toctree-l3"><a class="reference internal" href="../../library/jesd204/xgt_wizard/">Xilinx FPGAs Transceivers Wizard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../library/jesd204/versal_transceiver_subsystem/">AMD Versal Adaptive SoC Transceiver Subsystem</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../library/jesd204/troubleshoot/troubleshoot_jesd204_tx/">Troubleshooting JESD204 TX links</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../library/jesd204/component_testbenches/">JESD204 Component-Level Testbenches</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-3" id="toctree-collapse-2-3"/><div class="collapse"><a class="reference internal" href="../../library/spi_engine/">SPI Engine</a><label for="toctree-collapse-2-3"><div class="icon"></div></label></div><ul>
@@ -236,13 +240,13 @@ Content on this topic
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../library/axi_ad35xxr/">AXI AD35XXR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../library/axi_ad408x/">AXI AD408x</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../library/axi_ad485x/">AXI AD485x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../library/axi_ad408x/">AXI AD408X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../library/axi_ad485x/">AXI AD485X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../library/axi_ad7405/">AXI AD7405</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../library/axi_ad7606x/">AXI AD7606x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../library/axi_ad7606x/">AXI AD7606X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../library/axi_ad7616/">AXI AD7616</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../library/axi_ad7768/">AXI AD7768</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../library/axi_ad777x/">AXI AD777x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../library/axi_ad777x/">AXI AD777X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../library/axi_ad9265/">AXI AD9265</a></li>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-4" id="toctree-collapse-2-4"/><div class="collapse"><a class="reference internal" href="../../library/axi_ad9361/">AXI AD9361</a><label for="toctree-collapse-2-4"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../library/axi_ad9361/tdd_support/">TDD Mode Support</a></li>
@@ -290,6 +294,7 @@ Content on this topic
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../library/spi_slave/">SPI Slave</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../library/util_axis_fifo/">AXI Stream FIFO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../library/util_axis_fifo_asym/">Asymmetric AXI Stream FIFO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../library/util_extract/">Util Extract</a></li>
@@ -300,7 +305,11 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../../library/util_sigma_delta_spi/">Util Sigma Delta SPI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../library/util_var_fifo/">Util VAR FIFO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../library/util_wfifo/">Util WFIFO</a></li>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-7" id="toctree-collapse-2-7"/><div class="collapse"><a class="reference internal" href="../../library/xilinx/">AMD Xilinx Specific IPs</a><label for="toctree-collapse-2-7"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-7" id="toctree-collapse-2-7"/><div class="collapse"><a class="reference internal" href="../../library/intel/">Intel Specific IPs</a><label for="toctree-collapse-2-7"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../library/intel/util_clkdiv/">Util Clock Divider</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-8" id="toctree-collapse-2-8"/><div class="collapse"><a class="reference internal" href="../../library/xilinx/">AMD Xilinx Specific IPs</a><label for="toctree-collapse-2-8"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../library/xilinx/util_adxcvr/">UTIL_ADXCVR</a></li>
 </ul>
 </li>
@@ -319,7 +328,7 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../ad4062_ardz/">AD4062-ARDZ</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">AD4080-FMC-EVB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ad4110/">AD4110-SDZ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ad411x_ad717x/">AD411x-AD717x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ad411x_ad717x/">AD411X-AD717X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ad4134_fmc/">AD4134-FMC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ad4170_asdz/">AD4170-ASDZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ad4630_fmc/">AD4630-FMC</a></li>
@@ -346,7 +355,7 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../ad9081_fmca_ebz_x_band/">AD9081-FMCA-EBZ-X-BAND</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ad9083_evb/">AD9083-EVB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ad9084_ebz/">AD9084-EBZ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ad916x_fmc/">AD916x-FMC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ad916x_fmc/">AD916X-FMC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ad9208_dual_ebz/">AD9208-DUAL-EBZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ad9209_fmca_ebz/">AD9209-FMCA-EBZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ad9213_dual_ebz/">AD9213-DUAL-EBZ</a></li>
@@ -363,6 +372,7 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../adaq23875/">ADAQ23875</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../adaq7980_sdz/">ADAQ7980-SDZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../adaq8092_fmc/">ADAQ8092-FMC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../adar3000/">ADAR3000</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../admx100x_evb/">ADMX100X-EVB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../admx6001_ebz/">ADMX6001-EBZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../adrd8012_01z/">ADRD8012-01Z</a></li>
@@ -371,11 +381,11 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../adrv9009/">ADRV9009</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../adrv9009zu11eg/">ADRV9009-ZU11EG</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../adrv9026/">ADRV9026</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../adrv903x/">ADRV903x</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../adrv904x/">ADRV904x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../adrv903x/">ADRV903X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../adrv904x/">ADRV904X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../adrv9361z7035/">ADRV9361Z7035</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../adrv9364z7020/">ADRV9364Z7020</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../adrv9371x/">ADRV9371x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../adrv9371x/">ADRV9371X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../adv7511/">ADV7511</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../adv7513/">ADV7513</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arradio/">ARRADIO</a></li>
@@ -404,6 +414,7 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../max96724/">MAX96724</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../pluto/">PLUTO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quad_adaq77681/">QUAD_ADAQ7768-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quad_quad_mxfe/">QUAD-QUAD-MXFE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../pulsar_adc/">PULSAR-ADC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../pulsar_lvds_adc/">PULSAR-LVDS-ADC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../admx6020m/">ADMX6020M</a></li>
@@ -445,7 +456,7 @@ in the HDL but has not been tested yet.</p>
 <p>The <a class="icon adi reference external" href="https://www.analog.com/EVAL-AD4080-FMC" target="_blank">EVAL-AD4080-FMC</a> is designed to demonstrate the
 <a class="icon adi reference external" href="https://www.analog.com/AD4080" target="_blank">AD4080</a> performance.</p>
 <p>The <a class="icon adi reference external" href="https://www.analog.com/EVAL-AD4080-FMC" target="_blank">EVAL-AD4080-FMC</a> HDL design supports the following
-<a class="icon adi reference external" href="https://www.analog.com/AD4080, AD4083, AD4086" target="_blank">AD4080, AD4083, AD4086</a> features:</p>
+<a class="icon adi reference external" href="https://www.analog.com/AD4080" target="_blank">AD4080</a>, <a class="icon adi reference external" href="https://www.analog.com/AD4083" target="_blank">AD4083</a>, <a class="icon adi reference external" href="https://www.analog.com/AD4086" target="_blank">AD4086</a> features:</p>
 <ul class="simple">
 <li><p>Single lane DDR data capture</p></li>
 <li><p>Self synchronization using the fixed pattern and bit-slip feature</p></li>
@@ -511,6 +522,105 @@ mezzanine card (FMC) connector.</p>
 <p>The data path and clock domains are depicted in the below diagram:</p>
 <a class="reference internal image-reference" href="../../_images/ad4080_fmc_evb_zed_block_diagram.svg"><img alt="AD4080-FMC-EVB/ZedBoard block diagram" class="align-center" src="../../_images/ad4080_fmc_evb_zed_block_diagram.svg" width="800" />
 </a>
+</section>
+<section id="spi-slave-interface">
+<h3>SPI slave interface<a class="headerlink" href="#spi-slave-interface" title="Link to this heading"></a></h3>
+<p>The optional SPI slave interface is enabled at build time with the
+<code class="docutils literal notranslate"><span class="pre">SPI_SLAVE=1</span></code> make parameter. It instantiates the <a class="reference internal" href="../../library/spi_slave/#spi-slave"><span class="std std-ref">SPI Slave</span></a> IP,
+which buffers the captured ADC samples in an asynchronous FIFO and streams
+them out to an external SPI master over the ZedBoard PMOD JB header,
+independently of the DMA data path. This lets a device that is not on the
+processor bus (for example a microcontroller acting as an SPI controller)
+read the ADC data without involving the processor or the DMA.</p>
+<a class="reference internal image-reference" href="../../_images/ad4080_fmc_evb_zed_spi_slave_hdl_bd.svg"><img alt="AD4080-FMC-EVB/ZedBoard block diagram with the optional SPI slave" class="align-center" src="../../_images/ad4080_fmc_evb_zed_spi_slave_hdl_bd.svg" width="800" />
+</a>
+<div><div class="collapsible docutils container">
+<input class="collapsible_input" id="8f9586c9bb476345712b15a2b7cc45458e8938b2" name="8f9586c9bb476345712b15a2b7cc45458e8938b2" type="checkbox"></input><label for="8f9586c9bb476345712b15a2b7cc45458e8938b2"><p>Click here for details on the block diagram modules</p>
+<div class="icon"></div></label><div class="collapsible_content docutils container">
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 20.0%" />
+<col style="width: 35.0%" />
+<col style="width: 35.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Block name</p></th>
+<th class="head"><p>IP name</p></th>
+<th class="head"><p>Documentation</p></th>
+<th class="head"><p>Additional info</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AXI AD408X</p></td>
+<td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/library/axi_ad408x" target="_blank">axi_ad408x</a></p></td>
+<td><p><a class="reference internal" href="../../library/axi_ad408x/#axi-ad408x"><span class="std std-ref">AXI AD408X</span></a></p></td>
+<td><p>Instance <code class="docutils literal notranslate"><span class="pre">axi_ad4080_adc</span></code>; captures the LVDS data clocked by
+<code class="docutils literal notranslate"><span class="pre">dco_clk</span></code> (<code class="docutils literal notranslate"><span class="pre">dco_p/n</span></code>, 400 MHz) and outputs <code class="docutils literal notranslate"><span class="pre">adc_data</span></code> in the
+<code class="docutils literal notranslate"><span class="pre">adc_clk</span></code> domain (<code class="docutils literal notranslate"><span class="pre">dco_clk</span></code> / 2 = 200 MHz)</p></td>
+</tr>
+<tr class="row-odd"><td><p>AXI DMAC</p></td>
+<td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/library/axi_dmac" target="_blank">axi_dmac</a></p></td>
+<td><p><a class="reference internal" href="../../library/axi_dmac/#axi-dmac"><span class="std std-ref">AXI DMAC</span></a></p></td>
+<td><p>Instance <code class="docutils literal notranslate"><span class="pre">axi_ad4080_dma</span></code>; RX only, 32-bit (or 16-bit) source,
+64-bit destination</p></td>
+</tr>
+<tr class="row-even"><td><p>SPI SLAVE</p></td>
+<td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/library/spi_slave" target="_blank">spi_slave</a></p></td>
+<td><p><a class="reference internal" href="../../library/spi_slave/#spi-slave"><span class="std std-ref">SPI Slave</span></a></p></td>
+<td><p>Instance <code class="docutils literal notranslate"><span class="pre">ad4080_spi_slave</span></code>; only present when <code class="docutils literal notranslate"><span class="pre">SPI_SLAVE=1</span></code>.
+<code class="docutils literal notranslate"><span class="pre">pmod_data_ready</span></code> is active low</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><p>The SPI slave operates in Mode 3 (clock idles high), MSB first, and only
+sources data (there is no MOSI). The external master polls
+<code class="docutils literal notranslate"><span class="pre">pmod_data_ready</span></code> to know when a new sample is available and frames each
+read as a single transfer. The signals are routed to the PMOD JB header
+using the LVCMOS33 I/O standard, as follows:</p>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Signal</p></th>
+<th class="head"><p>PMOD JB pin</p></th>
+<th class="head"><p>FPGA pin</p></th>
+<th class="head"><p>Direction (FPGA view)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pmod_spi_cs</span></code></p></td>
+<td><p>JB1</p></td>
+<td><p>W12</p></td>
+<td><p>Input</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pmod_spi_sclk</span></code></p></td>
+<td><p>JB2</p></td>
+<td><p>W11</p></td>
+<td><p>Input</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pmod_spi_miso</span></code></p></td>
+<td><p>JB3</p></td>
+<td><p>V10</p></td>
+<td><p>Output</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pmod_data_ready</span></code></p></td>
+<td><p>JB4</p></td>
+<td><p>W8</p></td>
+<td><p>Output</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <section id="clock-scheme">
 <h3>Clock scheme<a class="headerlink" href="#clock-scheme" title="Link to this heading"></a></h3>
@@ -578,62 +688,54 @@ added to the base address from HDL (see more at <a class="reference internal" hr
 </section>
 <section id="gpios">
 <h3>GPIOs<a class="headerlink" href="#gpios" title="Link to this heading"></a></h3>
-<div class="table-wrapper colwidths-given docutils container">
+<p>To know how the Software GPIO numbers are calculated, check out
+<a class="reference internal" href="../../user_guide/architecture/#architecture-gpio"><span class="std std-ref">GPIOs - HDL Architecture page</span></a>.</p>
+<div class="table-wrapper docutils container">
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 25.0%" />
-<col style="width: 20.0%" />
-<col style="width: 20.0%" />
-<col style="width: 20.0%" />
-<col style="width: 15.0%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GPIO signal</p></th>
 <th class="head"><p>Direction</p></th>
-<th class="head"><p>HDL GPIO EMIO</p></th>
-<th class="head"><p>Software GPIO</p></th>
-<th class="head"><p>Software GPIO</p></th>
-</tr>
-<tr class="row-even"><th class="head"></th>
-<th class="head"><p>(from FPGA view)</p></th>
-<th class="head"></th>
+<th class="head"><p>HDL no.</p></th>
 <th class="head"><p>Zynq-7000</p></th>
-<th class="head"><p>Zynq MP</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-odd"><td><p>sync_req</p></td>
+<tr class="row-even"><td><p>ad9508_sync</p></td>
 <td><p>OUT</p></td>
 <td><p>37</p></td>
 <td><p>91</p></td>
-<td><p>115</p></td>
 </tr>
-<tr class="row-even"><td><p>pwrgd</p></td>
+<tr class="row-odd"><td><p>pwrgd</p></td>
 <td><p>IN</p></td>
 <td><p>36</p></td>
 <td><p>90</p></td>
-<td><p>114</p></td>
 </tr>
-<tr class="row-odd"><td><p>adf435x_lock</p></td>
-<td><p>IN</p></td>
+<tr class="row-even"><td><p>adf435x_lock</p></td>
+<td><p>INOUT</p></td>
 <td><p>35</p></td>
 <td><p>89</p></td>
-<td><p>113</p></td>
-</tr>
-<tr class="row-even"><td><p>gpio3_fmc</p></td>
-<td><p>INOUT</p></td>
-<td><p>34</p></td>
-<td><p>88</p></td>
-<td><p>112</p></td>
 </tr>
 <tr class="row-odd"><td><p>gpio3_fmc</p></td>
 <td><p>INOUT</p></td>
+<td><p>34</p></td>
+<td><p>88</p></td>
+</tr>
+<tr class="row-even"><td><p>gpio2_fmc</p></td>
+<td><p>INOUT</p></td>
 <td><p>33</p></td>
 <td><p>87</p></td>
-<td><p>111</p></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Legend</p>
+<ul class="simple">
+<li><p>GPIO signal = name of the GPIO in the HDL project</p></li>
+<li><p>Direction = from the FPGA point of view</p></li>
+<li><p>HDL no. = HDL GPIO EMIO</p></li>
+<li><p>Zynq-7000 = Software GPIO, to be used in device trees</p></li>
+</ul>
 </div>
 </section>
 <section id="interrupts">
@@ -696,10 +798,24 @@ configuration (ADC_N_BITS=20):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span><span class="nv">ADC_N_BITS</span><span class="o">=</span><span class="m">16</span>
 </pre></div>
 </div>
+<div class="clear-left"></div></div></div><p>Example of running the <code class="docutils literal notranslate"><span class="pre">make</span></code> command with the optional SPI slave interface
+enabled on the PMOD JB header:</p>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>hdl/projects/ad4080_fmc_evb/zed
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~/hdl/projects/ad4080_fmc_evb/zed$
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span><span class="nv">SPI_SLAVE</span><span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
 <div class="clear-left"></div></div></div><p>The following table contains the parameters that can be used to configure this
 project:</p>
 <div><div class="collapsible docutils container">
-<input class="collapsible_input" id="5b11fe06df1e91227f880754723f56bd4f8f9bdf" name="5b11fe06df1e91227f880754723f56bd4f8f9bdf" type="checkbox"></input><label for="5b11fe06df1e91227f880754723f56bd4f8f9bdf"><p>Default values of the make parameters for AD4080-FMC-EVB HDL project</p>
+<input class="collapsible_input" id="1020052e633e472c0e497269e07ceab84e7b7c25" name="1020052e633e472c0e497269e07ceab84e7b7c25" type="checkbox"></input><label for="1020052e633e472c0e497269e07ceab84e7b7c25"><p>Default values of the make parameters for AD4080-FMC-EVB HDL project</p>
 <div class="icon"></div></label><div class="collapsible_content docutils container">
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
@@ -715,6 +831,14 @@ project:</p>
 <li><p>20</p></li>
 <li><p>16</p></li>
 <li><p>14</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>SPI_SLAVE</p></td>
+<td><p>Add the optional SPI slave (PMOD JB) interface (default: 0)</p>
+<ul class="simple">
+<li><p>0</p></li>
+<li><p>1</p></li>
 </ul>
 </td>
 </tr>
@@ -769,7 +893,7 @@ project:</p>
 <tbody>
 <tr class="row-even"><td><p>AXI_AD408X</p></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/library/axi_ad408x" target="_blank">library/axi_ad408x</a></p></td>
-<td><p><a class="reference internal" href="../../library/axi_ad408x/#axi-ad408x"><span class="std std-ref">AXI AD408x</span></a></p></td>
+<td><p><a class="reference internal" href="../../library/axi_ad408x/#axi-ad408x"><span class="std std-ref">AXI AD408X</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>AXI_CLOCK_MONITOR</p></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/library/axi_clock_monitor" target="_blank">library/axi_clock_monitor</a></p></td>
@@ -795,11 +919,15 @@ project:</p>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/library/axi_spdif_tx" target="_blank">library/axi_spdif_tx</a></p></td>
 <td><p>—</p></td>
 </tr>
-<tr class="row-odd"><td><p>SYSID_ROM</p></td>
+<tr class="row-odd"><td><p>SPI_SLAVE</p></td>
+<td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/library/spi_slave" target="_blank">library/spi_slave</a></p></td>
+<td><p><a class="reference internal" href="../../library/spi_slave/#spi-slave"><span class="std std-ref">SPI Slave</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>SYSID_ROM</p></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/library/sysid_rom" target="_blank">library/sysid_rom</a></p></td>
 <td><p><a class="reference internal" href="../../library/axi_sysid/#axi-sysid"><span class="std std-ref">AXI System ID</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p>UTIL_I2C_MIXER</p></td>
+<tr class="row-odd"><td><p>UTIL_I2C_MIXER</p></td>
 <td><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/hdl/tree/main/library/util_i2c_mixer" target="_blank">library/util_i2c_mixer</a></p></td>
 <td><p>—</p></td>
 </tr>
@@ -815,7 +943,7 @@ project:</p>
 <li><p><a class="icon link reference external" href="https://analogdevicesinc.github.io/pyadi-iio/" target="_blank">PyADI-IIO documentation</a></p></li>
 <li><p><a class="icon link reference external" href="https://github.com/analogdevicesinc/pyadi-iio/blob/ad4080/examples/ad4080_example.py" target="_blank">PyADI-IIO example</a></p></li>
 <li><p><a class="icon link reference external" href="https://github.com/analogdevicesinc/pyadi-iio/blob/ad4080/adi/ad4080.py" target="_blank">PyADI-IIO class</a></p></li>
-<li><p>AD4080-FMC-EVB Linux device tree <a class="icon git reference external" href="https://github.com/analogdevicesinc/linux/tree/ci/arch/arm/boot/dts/xilinx/zynq-zed-adv7511-ad4080.dts" target="_blank">arch/arm/boot/dts/xilinx/zynq-zed-adv7511-ad4080.dts</a></p></li>
+<li><p>AD4080-FMC-EVB Linux device tree <a class="icon git reference external" href="https://github.com/analogdevicesinc/linux/tree/ci/arch/arm/boot/dts/xilinx/zynq-zed-ad4080.dts" target="_blank">arch/arm/boot/dts/xilinx/zynq-zed-ad4080.dts</a></p></li>
 <li><p>AD4080 Linux driver <a class="icon git reference external" href="https://github.com/analogdevicesinc/linux/tree/ci/drivers/iio/adc/ad4080.c" target="_blank">ad4080.c</a></p></li>
 </ul>
 </li>
